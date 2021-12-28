@@ -5,7 +5,7 @@
  */
 package fundamentals;
 
-import java.util.Date;
+import java.awt.Point;
 
 /**
  *
@@ -14,12 +14,11 @@ import java.util.Date;
 public class Fundamentals {
 
     public static void main(String[] args) {
-        // Primitive types
-        byte age = 30;
-        
-        // Reference types
-        Date now = new Date(); // new operator is to allocate memory for reference types
-        System.out.println(now);
+        Point point1 = new Point(1,1);
+        Point point2 = point1;
+        // point1 and point2 are referencing the exact same object in memory
+        point1.x = 5;
+        System.out.println(point2.x);
     }
     
 }
