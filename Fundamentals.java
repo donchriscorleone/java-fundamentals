@@ -13,9 +13,16 @@ package fundamentals;
 public class Fundamentals {
 
     public static void main(String[] args) {
-        String message = "Hello World" + "!!"; // String is a reference type
-        System.out.println(message.endsWith("!!"));
-        System.out.println(message.length());
+        String message = "Hello \"World\" "; // prefix double quote with backslash
+        
+        String path = "c:\\Windows\\.." ; // prefix backslash
+        
+        String newLine = "c:\nWindows\n..."; // new line
+        String tab = "c:\tWindows\t.."; // tab
+        System.out.println(message);
+        System.out.println(path);
+        System.out.println(newLine);
+        System.out.println(tab);
     }
     
 }
