@@ -11,11 +11,11 @@ package fundamentals;
  */
 public class Fundamentals {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+       int myAge = 30;
+       int herAge = myAge;
+       myAge = 25;
+        System.out.println(herAge);
     }
     
 }
