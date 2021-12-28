@@ -17,23 +17,27 @@ import java.util.Scanner;
 public class Fundamentals {
 
     public static void main(String[] args) {
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
+        
         Scanner scanner = new Scanner(System.in);
         System.out.print("Principal: ");
         int principal = scanner.nextInt();
         
         System.out.print("Annual Interest Rate: ");
-        float interest = scanner.nextFloat() / 100;
-        float monthlyInterest = interest / 12;
+        float annualInterest = scanner.nextFloat();
+        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         
         System.out.print("Period (Years): "); 
         byte years = scanner.nextByte();
-        int months = years * 12;
+        int months = years * MONTHS_IN_YEAR;
         
-        double upper = monthlyInterest * Math.pow(1 + monthlyInterest, months);
-        double lower = Math.pow(1 + monthlyInterest, months) - 1;
+        double mortgage = principal * 
+                (monthlyInterest * Math.pow(1 + monthlyInterest, months) 
+                / (Math.pow(1 + monthlyInterest, months) - 1));
         
-        double mortgage = principal * (upper / lower);
-        System.out.println("Mortgage: " + NumberFormat.getCurrencyInstance().format(mortgage));
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.println("Mortgage: " + mortgageFormatted);
     }
     
 }
