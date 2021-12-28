@@ -22,11 +22,18 @@ public class Fundamentals {
         float annualInterest = (float) (readNumber("Annual Interest Rate: ", 1, 30));
         short years = (short)(readNumber("Period (Years): ", 1, 30));
         
+        printMortgage(principal, annualInterest, years);
+        printPaymentSchedule(years, principal, annualInterest);
+    }
+
+    private static void printMortgage(int principal, float annualInterest, short years) {
         double mortgage = calculateMortgage(principal, annualInterest, years);
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("\nMORTGAGE\n-----");
         System.out.println("Monthly Payments: " + mortgageFormatted);
-        
+    }
+
+    private static void printPaymentSchedule(short years, int principal, float annualInterest) {
         System.out.println("\nPAYMENT SCHEDULE\n----------");
         for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
             double balance = calculateBalance(principal, annualInterest, years, month);
