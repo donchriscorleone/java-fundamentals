@@ -5,6 +5,8 @@
  */
 package fundamentals;
 
+import java.util.Date;
+
 /**
  *
  * @author christopherii
@@ -12,8 +14,12 @@ package fundamentals;
 public class Fundamentals {
 
     public static void main(String[] args) {
-        final float PI = 3.14F;
-        // PI = 15.4F; // compilation error because it has final keyword or constant. Constant must be in capital letters
+        // Primitive types
+        byte age = 30;
+        
+        // Reference types
+        Date now = new Date(); // new operator is to allocate memory for reference types
+        System.out.println(now);
     }
     
 }
