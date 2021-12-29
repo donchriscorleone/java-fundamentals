@@ -13,9 +13,16 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
     
+    public static int numberOfEmployees;
+    
     public Employee(int baseSalary, int hourlyRate) {
         this.setBaseSalary(baseSalary);
         this.setHourlyRate(hourlyRate);
+        numberOfEmployees++;
+    }
+    
+    public static void printNumberOfEmployees() {
+        System.out.println(numberOfEmployees);
     }
     
     public int calculateWage(int extraHours) {
