@@ -22,23 +22,23 @@ public class Employee {
         return baseSalary + (hourlyRate * extraHours);
     }
     
-    public void setBaseSalary(int baseSalary) {
+    private void setBaseSalary(int baseSalary) {
         if (baseSalary <= 0) throw new IllegalArgumentException("Salary cannot be 0 or less.");
         
         this.baseSalary = baseSalary;
     }
     
-    public int getBaseSalary() {
+    private int getBaseSalary() {
         return this.baseSalary;
     }
     
-    public void setHourlyRate(int hourlyRate) {
+    private void setHourlyRate(int hourlyRate) {
         if (hourlyRate <= 0) throw new IllegalArgumentException("Hourly Rate cannot be 0 or less.");
         
         this.hourlyRate = hourlyRate;
     }
     
-    public int getHourlyRate() {
+    private int getHourlyRate() {
         return this.hourlyRate;
     }
 }
