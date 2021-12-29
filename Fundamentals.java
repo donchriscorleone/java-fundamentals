@@ -5,10 +5,6 @@
  */
 package fundamentals;
 
-import java.text.NumberFormat;
-import java.util.Scanner;
-
-
 /**
  *
  * @author christopherii
@@ -16,9 +12,7 @@ import java.util.Scanner;
 public class Fundamentals {
 
     public static void main(String[] args) {
-        Employee employee = new Employee();
-        employee.setHourlyRate(150);
-        employee.setBaseSalary(10);
+        Employee employee = new Employee(50_000, 20);
         int wage = employee.calculateWage(10);
         System.out.println(wage);
     }
