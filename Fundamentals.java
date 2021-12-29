@@ -17,6 +17,8 @@ public class Fundamentals {
 
     public static void main(String[] args) {
         Employee employee = new Employee();
+        employee.setHourlyRate(150);
+        employee.setBaseSalary(10);
         int wage = employee.calculateWage(10);
         System.out.println(wage);
     }
